@@ -3,7 +3,7 @@
 Blockchain::Blockchain()
 {
     _chain.emplace_back(Block(0, "Genesis Block"));
-    _diff = 6;
+    _diff = 5;
 }
 
 void Blockchain::addBlock(Block newBlock)

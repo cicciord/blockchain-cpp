@@ -6,17 +6,18 @@
 #include "Block.h"
 using namespace std;
 
-class Blockchain {
-    public:
-        Blockchain();
+class Blockchain
+{
+public:
+    Blockchain();
 
-        void AddBlock( Block newBlock );
-    
-    private:
-        uint32_t _diff;
-        vector<Block> _chain;
+    void AddBlock(Block newBlock);
 
-        Block _GetLastBlock() const;
-}
+private:
+    uint32_t _diff;
+    vector<Block> _chain;
+
+    Block _GetLastBlock() const;
+};
 
 #endif

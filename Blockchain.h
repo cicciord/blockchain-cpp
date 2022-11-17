@@ -11,13 +11,13 @@ class Blockchain
 public:
     Blockchain();
 
-    void AddBlock(Block newBlock);
+    void addBlock(Block newBlock);
 
 private:
     uint32_t _diff;
     vector<Block> _chain;
 
-    Block _GetLastBlock() const;
+    Block _getLastBlock() const;
 };
 
 #endif

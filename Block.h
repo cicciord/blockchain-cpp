@@ -11,8 +11,8 @@ class Block
 public:
     string prevHash;
     Block(uint32_t indexIn, const string &dataIn);
-    string GetHash();
-    void MineBlock(uint32_t diff);
+    string getHash();
+    void mineBlock(uint32_t diff);
 
 private:
     uint32_t _index;
@@ -21,7 +21,7 @@ private:
     string _hash;
     time_t _time;
 
-    string _CalculateHash() const;
+    string _calculateHash() const;
 };
 
 #endif

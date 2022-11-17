@@ -13,7 +13,7 @@ Block::Block(uint32_t indexIn, const string &dataIn) : _index(indexIn), _data(da
 /**
  * block's hash accessor
  */
-string Block::GetHash()
+string Block::getHash()
 {
     return _hash;
 }
@@ -21,7 +21,7 @@ string Block::GetHash()
 /**
  * block mining method
  */
-void Block::MineBlock(uint32_t diff)
+void Block::mineBlock(uint32_t diff)
 {
     // create a string of zeros as long as the difficulty
     char chstr[diff + 1];
@@ -36,13 +36,13 @@ void Block::MineBlock(uint32_t diff)
     while (_hash.substr(0, diff) != str)
     {
         _nonce++;
-        _hash = _CalculateHash();
+        _hash = _calculateHash();
     }
 
     cout << "Block mined: " << _hash << endl;
 }
 
-inline string Block::_CalculateHash() const
+inline string Block::_calculateHash() const
 {
     stringstream strs;
     strs << _index << _time << _data << _nonce << prevHash;
